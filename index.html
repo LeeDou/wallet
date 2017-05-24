@@ -3,9 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>wallet</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	  <!-- 对视窗缩放等级进行限制，使其适应移动端屏幕大小 -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <!-- 添加到主屏幕后全屏显示 -->
+	  <meta name="apple-touch-fullscreen" content="yes" />
+    <meta charset="utf-8">
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script>
+      let html = document.documentElement;
+      //基于 iphone6 的宽（ 375px ），在这里分成 25 份
+      let size = html.getBoundingClientRect().width
+      window.rem = html.getBoundingClientRect().width / 25 ;
+      html.style.fontSize = window.rem + 'px';
+    </script>
   </body>
 </html>
