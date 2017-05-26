@@ -1,0 +1,65 @@
+.finacing{
+	width: 96%;
+	margin: 0 auto;
+	padding-top: 1rem;
+	text-indent: 0.4rem;
+	.item{
+		width: 100%;
+		background-color: #ffffff;
+		padding-bottom: 1.5rem;
+		margin-bottom: 1rem;
+		h3{
+			height: 2rem;
+			line-height: 2rem;
+			color: #919191;
+			font-size: 0.8rem;
+			font-weight: lighter;
+			span{
+				display: inline-block;
+				width: 1.2rem;
+				height: 1rem;
+				line-height: 1rem;
+				text-align: center;
+				vertical-align: middle;
+				background-color: #D13A29;
+				color: #ffffff;
+				border-radius: 0.2rem;
+			}
+		}
+		.item_content{
+			overflow: hidden;
+			zoom: 1;
+			.item_left, .item_center, .item_right{
+				width: 33%;
+				float: left;
+				h2{
+					line-height: 3rem;
+					height: 3rem;
+					color: #D13A29;
+				}
+				p{
+					font-size: 0.7rem;
+				}
+			}
+			.item_right{
+				width: 5rem;
+				height: 1.6rem;
+				margin: 0.5rem;
+				// line-height: 2rem;
+				border-radius: 1.6rem;
+				background-color: #D13A29;
+			}
+			.item_right h2{
+				height: 1.6rem;
+				font-size: 1rem;
+				font-weight: 400;
+				line-height: 1.6rem;
+				text-align: center;
+				color: #ffffff;
+			}
+			.item_right p{
+				padding-top: 0.8rem;
+			}
+		}
+	}
+}
