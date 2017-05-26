@@ -1,0 +1,89 @@
+.myself{
+	width: 100%;
+	// padding-top: 0.5rem;
+	text-indent: 1rem;
+	.head{
+		width: 100%;
+		// height: 4rem;
+		padding-top: 0.5rem;
+		margin-bottom: 1rem;
+		overflow: hidden;		
+		background-color: #ffffff;
+		.person{
+			width: 15%;
+		}
+	    .nickname{
+	    	width: 50%;
+	    	margin-left: 5rem;
+	    	margin-top: -4rem;
+	    	h1{
+	    		font-size: 1.5rem;
+	    	}
+	    }
+	    .arrow{
+	    	width: 10%;
+	    	height: 5rem;
+	    	margin-top: -4rem;
+	    	margin-left: 85%;
+	    	font-size: 1.5rem;
+	    	line-height: 5rem;
+	    }
+	    .sun{
+	    	width: 90%;
+	    	margin: 0 auto;
+	    	overflow: hidden;
+	    	zoom: 1;
+	    	border-top: 0.1rem solid #cccccc;
+	    	.assets, .income, .sum_inc{
+	    		width: 25%;
+	    		height: 2rem;
+	    		float: left;
+	    		margin:1rem 0.4rem;
+				padding:0.5rem;
+				border-radius: 0.2rem;
+	    		margin-right: 2%;
+	    	}
+	    	.assets{
+				background-color: #FDC73B;
+	    	}
+	    	.income{
+	    		background-color: #66BB5E;
+	    	}
+	    	.sum_inc{
+	    		background-color: #F38842;
+	    	}
+	    }
+	}
+	.message_list{
+		width: 100%;
+		background-color: #ffffff;
+		.message_item{
+			width: 90%;
+			height: 4rem;
+			margin: 0 auto;
+			
+			p{
+				position: relative;
+				width: 90%;
+				height: 4rem;
+				margin-left: 10%;
+				text-indent: -0.1rem;
+				line-height: 4rem;
+				border-bottom: 0.1rem solid #cccccc;
+				span{
+					position: absolute;
+					right: 5%;
+				}		
+			}			
+		}
+		.it_one{
+			background: url('../assets/img/pinco1.png') no-repeat center left;
+		}
+		.it_two{
+			background: url('../assets/img/pinco2.png') no-repeat center left;
+		}
+		.it_three{
+			background: url('../assets/img/pinco3.png') no-repeat center left;
+		}
+	}
+}
