@@ -1,0 +1,39 @@
+.secure{
+	width: 96%;
+	margin: 0 auto;
+	padding-top: 1rem;
+	.item{
+		width: 100%;
+		margin-bottom: 2rem;
+		img{
+			width: 36%;
+		}
+		.item_content{
+			width: 60%;
+			margin-left: 40%;
+			margin-top: -7rem;
+			p{
+				height: 1.5rem;
+				line-height: 1.5rem;
+				color: #B0B0B0;
+			}
+			.belong{
+				width: 4.2rem;
+				color: #ffffff;
+				text-align: center;
+				background-color: red;
+				border-radius: 0.2rem;
+			}
+			.value{
+				color: red;
+				font-size: 1.1rem;
+				text-align: right;
+				span{
+					color: #B0B0B0;
+					font-size: 0.8rem;
+				}
+			}
+		}
+		
+	}
+}
