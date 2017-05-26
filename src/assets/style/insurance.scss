@@ -1,0 +1,80 @@
+.insurance{	
+	width: 96%;
+	margin: 0 auto 1rem;	
+	.title{
+		width: 100%;
+		height: 1.5rem;
+		position: relative;
+		overflow: hidden;
+		zoom: 1;
+		margin-bottom: 1rem;
+		.indent{
+			width: 0.4rem;
+			height: 1.2rem;
+			background-color: #D13A29;
+		}
+		.tag_name{
+			position: absolute;
+			width: 10rem;
+			left: 0;
+			top: 0;
+			height: 1.5rem;
+			line-height: 1.5rem;
+			text-indent: 0.8rem;
+			font-size: 1rem;			
+		}
+		.more{
+			position: absolute;
+			height: 1.5rem;
+			line-height: 1.5rem;
+			top: 0;
+			right: 0.8rem;
+			color: #D13A29;	
+		}
+		.rig{
+			position: absolute;
+			top: 0.3rem;
+			right: 0.2rem;
+			display: inline-block;
+			width: 0;
+			height: 0;
+			border-top: 0.4rem solid transparent;
+			border-left: 0.4rem solid red;
+			border-bottom: 0.4rem solid transparent;
+		}
+	}
+	.item{
+		width: 100%;
+		margin-bottom: 2rem;
+		img{
+			width: 36%;
+		}
+		.item_content{
+			width: 60%;
+			margin-left: 40%;
+			margin-top: -7rem;
+			p{
+				height: 1.5rem;
+				line-height: 1.5rem;
+				color: #B0B0B0;
+			}
+			.belong{
+				width: 4.2rem;
+				color: #ffffff;
+				text-align: center;
+				background-color: red;
+				border-radius: 0.2rem;
+			}
+			.value{
+				color: red;
+				font-size: 1.1rem;
+				text-align: right;
+				span{
+					color: #B0B0B0;
+					font-size: 0.8rem;
+				}
+			}
+		}
+	}
+	
+}

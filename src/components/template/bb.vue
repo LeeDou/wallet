@@ -1,5 +1,5 @@
 <template>
-  <div class="bannel">
+  <div class="bannel" v-on:touchenter="stop" @touchleave="go" @mouseenter="stop" @mouseleave="go">
     <transition-group  tag='ul' class="slide" name='image'>
       <li v-for='(image,index) in img' :key='index' v-show='index===mark'>
         <a><img :src="image.src"></a>
@@ -42,23 +42,55 @@ export default {
     }  
   },  
   created() {
-  	this.play()
+  	this.$nextTick(() => {
+      this.timer = setInterval(() =>{this.autoPlay()},3000)
+    })
+      // this.play()
+    
   },
-  methods:{
-  	change(i){  
+  methods: {
+    go() {
+      this.timer = setInterval(()=>{this.autoPlay()},3000)
+    },
+    stop() {
+      clearInterval(this.timer)
+      this.timer = null
+      console.log('aaa')
+    },
+    change(i){  
       this.mark = i      
-  	},
-  	autoPlay() {
-  	  this.mark++
-  	  if (this.mark === 5) {
-  	  	this.mark = 0
-  	  	return
-  	  }	
-  	},
-  	play() {
-  		this.timmer = setInterval(this.autoPlay,3000)
-  	}
-  },  
+    },
+    autoPlay() {
+      this.mark++
+      if (this.mark === 5) {
+        this.mark = 0
+        return
+      } 
+    }
+    // play() {
+    //   this.timmer = setInterval(this.autoPlay,3000)
+    // }
+  },
+  // methods:{
+  	// stop() {
+  	// 	clearInterval(this.timer)
+  	// 	this.timer = null;
+  	// 	console.log(this.timer)
+  	// },
+  	// change(i){  
+   //    this.mark = i      
+  	// },
+  	// autoPlay() {
+  	//   this.mark++
+  	//   if (this.mark === 5) {
+  	//   	this.mark = 0
+  	//   	return
+  	//   }	
+  	// },
+  	// play() {
+  	// 	this.timmer = setInterval(this.autoPlay,3000)
+  	// }
+  // },  
   computed: {      
   }  
 }
