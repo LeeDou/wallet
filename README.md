@@ -25,7 +25,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 ## 技术栈 vue + vuex + axios + vue-router
 
 ##截图：
-![首屏]()
-![]()
-![]()
-![]()
+![首屏](https://github.com/LeeDou/wallet/blob/master/img/home.png)
+![](https://github.com/LeeDou/wallet/blob/master/img/safe.png)
+![](https://github.com/LeeDou/wallet/blob/master/img/safe.png)
+![](https://github.com/LeeDou/wallet/blob/master/img/my.png)
