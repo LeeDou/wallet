@@ -39,10 +39,6 @@
 	  	<p>更多<span>></span></p>
 	  	
 	  </div>
-	  <div v-for="list in message">
-	  	<p>{{list.name}}</p>
-	  	<p>{{list.age}}</p>
-	  </div>
 	</div>
   </div>
 </template>

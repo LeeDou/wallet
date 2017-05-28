@@ -73,12 +73,7 @@ export default {
 			pagey1:0,
 			pagey2:0,
 			pagey3:0,
-			tm:[
-				// {src:'./static/img/insure2.png',
-				// htit:'nihoa',
-				// pcon:'zheyang',
-				// ptit:'mianfei'}
-			]
+			tm:[]
 		}
 	},
 	methods:{
