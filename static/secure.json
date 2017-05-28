@@ -1,0 +1,14 @@
+[
+	{"src": "./static/img/insure1.png",
+	"htit": "碎屏保",
+	"pcon": "保质期1",
+	"ptit": "这是测试数据"},
+	{"src": "./static/img/insure2.png",
+	"htit": "步步保",
+	"pcon": "保质期2",
+	"ptit": "这是测试数据"},
+	{"src": "./static/img/insure3.png",
+	"htit": "出行意外保障",
+	"pcon": "保质期3",
+	"ptit": "这是测试数据"}
+]						

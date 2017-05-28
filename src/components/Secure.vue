@@ -1,5 +1,5 @@
 <template>
-  <div class="secure">
+  <div class="secure" @touchstart="touchbegin" @touchmove="touchmo" @touchend="thouchen">
     <div class="item">
       <img src="../assets/img/insure1.png" alt="">
       <div class="item_content">
@@ -54,12 +54,69 @@
         <h5 class="value">￥69 <span>/年</span></h5>
       </div>
     </div>
+    <div class="item" v-for="ts in tm">
+    	<img width="20" height="100" :src="ts.src">
+    	<div class="item_content">
+    	  <h3>{{ts.htit}}</h3>
+          <p>{{ts.pcon}}</p>
+          <p class="belong">{{ts.ptit}}</p>
+          <h5 class="value">￥69 <span>/年</span></h5>
+    	</div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
+	data(){
+		return {
+			pagey1:0,
+			pagey2:0,
+			pagey3:0,
+			tm:[
+				// {src:'./static/img/insure2.png',
+				// htit:'nihoa',
+				// pcon:'zheyang',
+				// ptit:'mianfei'}
+			]
+		}
+	},
+	methods:{
+		touchbegin:function(event){
+			let touch = event.targetTouches[0];
+			let py1 = touch.pageY;
+			this.pagey1 = py1;
+			console.log(py1)
+		},
+		touchmo: function(event){
+			let touch = event.targetTouches[0];
+			let py2 = touch.pageY;
+			this.pagey2 = py2;
+		},
+		thouchen: function(event){
+			let py3 = Math.abs(this.pagey1 - this.pagey2);
+			this.pagey3 = py3;
+			console.log(py3);
+      if (this.pagey3>10) {
+        this.do()
+      }
+      console.log(this.tm);
+		},
+		do: function(){
+      let that = this;
 
+      this.$ajax.get("./static/secure.json").then(function(response){
+        console.log(response);
+        let list = response.data;
+        for(let j = list.length-1;j>=0;j--){
+          that.tm.push(list[j])
+        }
+        
+      }).catch(e=>{console.log(e)})
+			console.log(this.tm);		
+		}		
+	},
+	
 }
 </script>
 

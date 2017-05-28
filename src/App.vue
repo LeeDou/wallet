@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    
     <div class="nav">
       <ul>
         <li ><router-link to="/" class="active">钱包</router-link></li>
@@ -16,7 +17,8 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  
 }
 </script>
 

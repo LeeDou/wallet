@@ -39,13 +39,43 @@
 	  	<p>更多<span>></span></p>
 	  	
 	  </div>
+	  <div v-for="list in message">
+	  	<p>{{list.name}}</p>
+	  	<p>{{list.age}}</p>
+	  </div>
 	</div>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-
+  data() {
+    return {
+      person: {},
+      message: []
+    }
+  },
+  methods: {
+    loadData () {
+      console.log("hello")	
+      let that = this
+      this.$ajax.get("./static/test.json").then(function(data){
+      	that.message.push(data.data);
+      	console.log(that.message);
+      }).catch(e=>{
+      	console.log(e)
+      })
+      that.message.push({name:'lee',age:'11'})
+      
+    }
+  },
+  mounted() {
+  	
+  },
+  created () {
+    this.loadData()
+  }
 }
 </script>
 

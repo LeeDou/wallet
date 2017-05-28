@@ -3,6 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import axios from 'axios'
+import 'babel-polyfill'
+
+Vue.prototype.$ajax = axios
 
 Vue.config.productionTip = false
 
