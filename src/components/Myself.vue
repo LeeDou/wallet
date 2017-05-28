@@ -12,15 +12,15 @@
 	  <div class="sun">
 		<div class="assets">
 			<p>总资产</p>
-			<p>***** <span>{{gassets}}</span></p>
+			<p>￥{{gassets}}</p>
 		</div>
 		<div class="income">
 			<p>昨日收益</p>
-			<p>￥0.0 <span>{{gtearnings}}</span></p>
+			<p>￥{{gtearnings}}</p>
 		</div>
 		<div class="sum_inc">
 			<p>累计收益</p>
-			<p>￥0.0 <span>{{gyearnings}}</span></p>
+			<p>￥{{gyearnings}}</p>
 		</div>
 	</div>
 	</div>
@@ -39,12 +39,12 @@
 	  	<p>更多<span>></span></p>
 	  	
 	  </div>
-	  <div>
+	  <!-- <div>
 	  	<p>name is {{name}}</p>
 	  	<p>no is {{no}}</p>
 		<button @click='cnname'>change name</button>
 		<button @click='cnno'>change no</button>
-	  </div>  
+	  </div> -->  
 	</div>
   </div>
 </template>
