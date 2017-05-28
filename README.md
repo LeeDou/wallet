@@ -23,6 +23,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 # 完成魅族钱包部分重构
 ## 技术栈 vue + vuex + axios + vue-router
+### 目前只是对部分进行重构，接下来会持续对项目进行增添。。。
 
 ## 截图：
 
