@@ -1,22 +1,28 @@
 <template>
   <div class="connect">
     <div class="inco">
-      <div class="image">
-        <img src="../../assets/img/inco1.png" alt="账本">
-      </div>
-      <p>记账本</p>
+      <router-link to='/Bill'>
+        <div class="image">
+          <img src="../../assets/img/inco1.png" alt="账本">
+        </div>
+        <p>记账本</p>
+      </router-link>  
     </div>
     <div class="inco">
-      <div class="image">
-        <img src="../../assets/img/inco2.png" alt="账本">
-      </div>
-      <p>充话费</p>
+      <router-link to='/Payphone'>
+        <div class="image">
+          <img src="../../assets/img/inco2.png" alt="账本">
+        </div>
+        <p>充话费</p>
+      </router-link>  
     </div>
     <div class="inco">
-      <div class="image">
-        <img src="../../assets/img/inco3.png" alt="账本">
-      </div>  
-      <p>冲流量</p>
+      <router-link to='/Payphone'>
+        <div class="image">
+          <img src="../../assets/img/inco3.png" alt="账本">
+        </div>  
+        <p>冲流量</p>
+      </router-link>  
     </div>
     <div class="inco">
       <div class="image">

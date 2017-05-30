@@ -39,6 +39,9 @@
 	  	<p>更多<span>></span></p>
 	  	
 	  </div>
+	  <div>
+	  	{{doubleCount}}
+	  </div>
 	  <!-- <div>
 	  	<p>name is {{name}}</p>
 	  	<p>no is {{no}}</p>
@@ -57,7 +60,9 @@ export default {
   data() {
     return {
       person: {},
-      message: []
+      message: [],
+
+      title:0
     }
   },
   // methods: {
@@ -79,15 +84,21 @@ export default {
   	'cnname'
   	]),
   mounted() {
-  	
+  	// this.title = store.state.a.count
   },
-  computed: mapGetters([
+  computed:{ 
+  	// cc() {
+  	// 	return store.state.a.count
+  	// },
+  	...mapGetters([
   	'name',
   	'no',
   	'gassets',
   	'gtearnings',
-  	'gyearnings'
-  	]),
+  	'gyearnings',
+  	'doubleCount'
+  	])
+  },
   created () {
     // this.loadData()
   }

@@ -8,6 +8,22 @@ import * as mutations from './mutations'
 
 Vue.use(Vuex)
 
+const moduleA = {
+	state: {
+		count:1
+	},
+	mutations : {
+		increnment (state) {
+			state.count++
+		}
+	},
+	getters: {
+		doubleCount (state) {
+			return state.count *2
+		}
+	}
+}
+
 const state = {
 	user : {
 		name:'kantle',
@@ -23,7 +39,10 @@ const store = new Vuex.Store({
 	state,
 	getters,
 	actions,
-	mutations
+	mutations,
+	modules: {
+		a: moduleA
+	}
 })
 
 export default store

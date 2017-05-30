@@ -4,7 +4,9 @@ import Home from '@/components/Home'
 import Finacing from '@/components/Finacing'
 import Secure from '@/components/Secure'
 import Myself from '@/components/Myself'
-
+import Bill from '@/components/template/Bill'
+import Movie from '@/components/template/Movie'
+import Payphone from '@/components/template/Payphone'
 
 Vue.use(Router)
 
@@ -16,10 +18,24 @@ export default new Router({
       component: Home
     },
     {
+      path: '/Payphone',
+      component: Payphone,
+    },
+    {
+      path: '/Movie',
+      component: Movie,
+    },
+    {
+      path: '/Bill',
+      name: 'Bill',
+      component: Bill,
+    },
+    {
       path: '/Finacing',
       name: 'Finacing',
       component: Finacing
     },
+
     {
       path: '/Secure',
       name: 'Secure',

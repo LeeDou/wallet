@@ -1,0 +1,193 @@
+.bill{
+	width: 100%;
+	background-color: #ffffff;
+	.back{
+		width: 94%;
+		height: 2.6rem;
+		margin: 0 auto;
+		p{
+			height: 2.6rem;
+			font-size: 1.1rem;
+			line-height: 2.6rem;
+			text-indent: 1rem;
+		}
+
+	}
+	.tab{
+		width: 100%;
+		.lk{
+			width: 90%;
+			height: 2rem;
+			margin: 0 auto;
+			border-bottom: 0.1rem solid #cccccc;
+			ul{
+				list-style: none;
+				li{
+					display: inline-block;
+					float: left;
+					width: 40%;
+					height: 2rem;
+					text-align: center;
+				}
+			}
+		}
+		.chart{
+			width: 100%;
+			height: 14rem;
+			.can{
+				position: relative;
+				.hold{
+					position: absolute;
+					left: 1rem;
+					top: 1rem;
+					width: 12rem;
+					height: 12rem;
+					clip:rect(0,12rem,12rem,6rem);
+				}
+				.pie{
+					position: absolute;
+					width: 12rem;
+					height: 12rem;
+					clip:rect(0,6rem,12rem,0);
+					-moz-border-radius:100px;
+					-webkit-border-radius:100px; 
+					border-radius:100px; 
+				}
+				#eat {
+					margin-top: 0;
+					margin-left: 0;
+				}
+				#eat .pie{
+					background-color:orange;
+					border-color:orange;
+					-moz-transform:rotate(90deg);
+					-webkit-transform:rotate(90deg);
+					-o-transform:rotate(90deg);
+					transform:rotate(90deg);
+				}
+				#tra {
+					-moz-transform:rotate(90deg);
+					-webkit-transform:rotate(90deg);
+					-o-transform:rotate(90deg);
+					transform:rotate(90deg);
+				}
+				#tra .pie{
+					background-color:blue;
+					border-color:blue;
+					-moz-transform:rotate(80deg);
+					-webkit-transform:rotate(80deg);
+					-o-transform:rotate(80deg);
+					transform:rotate(80deg);
+				}
+				#stu {
+					-moz-transform:rotate(160deg);
+					-webkit-transform:rotate(160deg);
+					-o-transform:rotate(160deg);
+					transform:rotate(160deg);
+				}
+				#stu .pie{
+					background-color:green;
+					border-color:green;
+					-moz-transform:rotate(70deg);
+					-webkit-transform:rotate(70deg);
+					-o-transform:rotate(70deg);
+					transform:rotate(70deg);
+				}
+				#spt {
+					-moz-transform:rotate(230deg);
+					-webkit-transform:rotate(230deg);
+					-o-transform:rotate(230deg);
+					transform:rotate(230deg);
+				}
+				#spt .pie{
+					background-color:salmon;
+					border-color:salmon;
+					-moz-transform:rotate(90deg);
+					-webkit-transform:rotate(90deg);
+					-o-transform:rotate(90deg);
+					transform:rotate(90deg);
+				}
+
+				#oth {
+					-moz-transform:rotate(320deg);
+					-webkit-transform:rotate(320deg);
+					-o-transform:rotate(320deg);
+					transform:rotate(320deg);
+				}
+				#oth .pie{
+					background-color:purple;
+					border-color:purple;
+					-moz-transform:rotate(40deg);
+					-webkit-transform:rotate(40deg);
+					-o-transform:rotate(40deg);
+					transform:rotate(40deg);
+				}
+
+			}
+			.detail{
+				width: 7rem;
+				height: 14rem;
+				margin-left: 16rem;
+				padding-top: 2rem;
+				.eat{
+					height: 1rem;
+					line-height: 1rem;
+					border-left: 1rem solid orange;
+					text-indent: 0.4rem;
+					margin-bottom: 0.2rem;
+				}
+				.tra{
+					height: 1rem;
+					line-height: 1rem;
+					border-left: 1rem solid blue;
+					text-indent: 0.4rem;
+					margin-bottom: 0.2rem;
+				}
+				.stu{
+					height: 1rem;
+					line-height: 1rem;
+					border-left: 1rem solid green;
+					text-indent: 0.4rem;
+					margin-bottom: 0.2rem;
+				}
+				.spt{
+					height: 1rem;
+					line-height: 1rem;
+					border-left: 1rem solid salmon;
+					text-indent: 0.4rem;
+					margin-bottom: 0.2rem;
+				}
+				.oth{
+					height: 1rem;
+					line-height: 1rem;
+					border-left: 1rem solid purple;
+					text-indent: 0.4rem;
+					margin-bottom: 0.2rem;
+				}
+			}
+		}
+	}
+	.foot{
+		position: fixed;
+		bottom: 0rem;
+		left: 0;
+		width: 100%;
+		height: 3rem;
+		border-top: 0.1rem solid #cccccc;
+		background-color:#ffffff; 
+		.take{
+			width: 80%;
+			height: 2rem;
+			margin: 0.5rem auto;
+			background-color: #D23B2A;
+			border-radius: 1.5rem;
+			p{
+				height: 2rem;
+				line-height: 2rem;
+				font-size: 1.1rem;
+				text-align: center;
+				color: #ffffff;
+			}
+		}
+	}
+}
