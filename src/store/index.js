@@ -10,11 +10,20 @@ Vue.use(Vuex)
 
 const moduleA = {
 	state: {
-		count:1
+		count:1,
+		message:''
 	},
 	mutations : {
-		increnment (state) {
-			state.count++
+		ince (state,date) {
+			state.count += date
+		}
+	},
+	actions : {
+		// ince ({}) {
+		// 	context.commit('ince')
+		// }
+		ince :({commit},e) => {
+			commit('ince',5 )
 		}
 	},
 	getters: {

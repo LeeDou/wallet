@@ -9,3 +9,7 @@ export const newno = state => {
 }
 
 // export const gasset = state 
+
+// export const updateMessage = (state,message) => {
+// 	state.obj.message = message
+// }

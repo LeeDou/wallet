@@ -36,11 +36,14 @@
 	  	
 	  </div>
 	  <div class="message_item it_three">
+
 	  	<p>更多<span>></span></p>
 	  	
 	  </div>
 	  <div>
-	  	{{doubleCount}}
+	    <!-- <input type="text" :value="message" @input="updateMessage">  -->
+		<button @click="ince" value=2>+4</button>
+	  	<p>{{doubleCount}}</p>
 	  </div>
 	  <!-- <div>
 	  	<p>name is {{name}}</p>
@@ -65,24 +68,16 @@ export default {
       title:0
     }
   },
-  // methods: {
-  //   loadData () {
-  //     console.log("hello")	
-  //     let that = this
-  //     this.$ajax.get("./static/test.json").then(function(data){
-  //     	that.message.push(data.data);
-  //     	console.log(that.message);
-  //     }).catch(e=>{
-  //     	console.log(e)
-  //     })
-  //     that.message.push({name:'lee',age:'11'})
-      
-  //   }
-  // },
-  methods: mapActions([
+  methods: {
+  	// updateMessage (e) {
+  	// 	this.$store.commit('updateMessage', e.target.value)
+  	// },
+  	...mapActions([
   	'cnno',
-  	'cnname'
-  	]),
+  	'cnname',
+  	'ince'
+  	])
+  },
   mounted() {
   	// this.title = store.state.a.count
   },
@@ -90,13 +85,25 @@ export default {
   	// cc() {
   	// 	return store.state.a.count
   	// },
+  	// message: {
+  	// 	get() {
+  	// 		return this.$store.state.obj.message
+  	// 	},
+  	// 	set (value) {
+  	// 		this.$store.commit('updateMessage', value)
+  	// 	}
+  	// },
+  	
+  	// message: state => state.obj.message,
+  	
   	...mapGetters([
   	'name',
   	'no',
   	'gassets',
   	'gtearnings',
   	'gyearnings',
-  	'doubleCount'
+  	'doubleCount',
+  	
   	])
   },
   created () {
