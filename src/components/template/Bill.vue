@@ -38,13 +38,6 @@
           <div>总计： {{count}}</div>
     		</div>
     	</div>
-<!--     	<div class="tree" id="tree" style="width:10rem;">
-        <p>ratfoot{{ratfoot}}</p>
-        <p @click="trans('box1')">测试计算</p>
-        <p>{{spt}}</p>
-        <p>{{count}}</p>
-    	</div> -->
-
     </div>
     <div class="foot">
     	<router-link to="/Put">
@@ -70,9 +63,6 @@ export default {
       ratio:[]
   	}
   },
-  // components: { 
-  //   Put
-  // },
   methods: {
     trans: function() {
       let arr0 = [];
@@ -89,8 +79,7 @@ export default {
       arr1[2] = arr0[0] + arr0[1]
       arr1[3] = arr0[0] + arr0[1] + arr0[2]
       arr1[4] = arr0[0] + arr0[1] + arr0[2] + arr0[3]
-      console.log(arr1)
-      
+      console.log(arr1)      
       let pien = document.getElementsByClassName('pie')
       let holdn = document.getElementsByClassName('hold')
       for(var j = pien.length-1;j>=0;j--){
@@ -109,9 +98,7 @@ export default {
       this.ratio.push(this.ratspt)
       this.ratoth = this.oth/this.count
       this.ratio.push(this.ratoth)
-
     }
-
   },
   computed: {
   	count: function(){
@@ -127,10 +114,8 @@ export default {
     ])
   },
   created(){
-
   },
   mounted() {
-	  // this.sty(),
     this.calraito()
     this.trans()
 	}
