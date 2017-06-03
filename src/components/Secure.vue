@@ -77,22 +77,62 @@ export default {
 		}
 	},
 	methods:{
+    gg: function() {
+      alert("success")
+    },
+    // 获取可视区域高度
+    getVisibleHeight: function(element) {
+      if (element) {
+        return element.offsetHeight
+      } else {
+        return document.documentElement.offsetHeight
+      }
+    },
+    // 获取滚动区域高度
+    getScrollHeight: function(element) {
+      if (element) {
+        return element.scrollHeight
+      } else {
+        return document.documentElement.scrollHeight
+      }
+    },
+    // 获取滚动位置信息
+    getScrollTop: function(element) {
+      if (element) {
+        return element.scrollTop
+      } else {
+        return document.documentElement.scrollTop
+      }
+    }, 
+
+    // touchstart
 		touchbegin:function(event){
+      var me = this
 			let touch = event.targetTouches[0];
 			let py1 = touch.pageY;
 			this.pagey1 = py1;
-			console.log(py1)
+      // 记住触屏时scrollTop的值
+      me.toScrollTop = this.getScrollTop(me.element)
+			// console.log(py1)
 		},
+    // touchmove
 		touchmo: function(event){
+      var me = this
 			let touch = event.targetTouches[0];
 			let py2 = touch.pageY;
 			this.pagey2 = py2;
+     
 		},
 		thouchen: function(event){
+      var me = this
 			let py3 = Math.abs(this.pagey1 - this.pagey2);
 			this.pagey3 = py3;
 			console.log(py3);
-      if (this.pagey3>10) {
+      // let h1 = me.toScrollTop + me.toHeight
+      // let h2 = me.scTop;
+      // console.log(h2)
+      // console.log(h1)
+      if (this.pagey3>10&&h1>h2) {
         this.do()
       }
       console.log(this.tm);
@@ -109,8 +149,11 @@ export default {
         
       }).catch(e=>{console.log(e)})
 			console.log(this.tm);		
-		}		
+		},
+    
+    
 	},
+
 	
 }
 </script>
