@@ -11,7 +11,6 @@
 		<button  @touchend='addfoot(tagval("refoot"))'>提交</button>
 		<br>
 
-		
 		<label for="retra">交通</label>
 		<input id="retra" type="number">
 		<button @touchend='addtra(tagval("retra"))'>提交</button>
