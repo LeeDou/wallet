@@ -7,6 +7,7 @@ import Myself from '@/components/Myself'
 import Bill from '@/components/template/Bill'
 import Movie from '@/components/template/Movie'
 import Payphone from '@/components/template/Payphone'
+import put from '@/components/template/put'
 
 Vue.use(Router)
 
@@ -48,6 +49,11 @@ export default new Router({
       child: {
 
       }
+    },
+    {
+      path: '/put',
+      name: 'put',
+      component: put
     }
   ]
 })

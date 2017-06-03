@@ -42,8 +42,11 @@
 	  </div>
 	  <div>
 	    <!-- <input type="text" :value="message" @input="updateMessage">  -->
-		<button @click="ince" value=2>+4</button>
-	  	<p>{{doubleCount}}</p>
+		<!-- <button @click="ince" value=2>+4</button>
+	  	<p>{{doubleCount}}</p> -->
+	  	<button @click='addtra' value="1">tra++</button>
+	  	<p>{{tra}}</p>
+	  	<p>{{foot}}</p>
 	  </div>
 	  <!-- <div>
 	  	<p>name is {{name}}</p>
@@ -69,45 +72,45 @@ export default {
     }
   },
   methods: {
-  	// updateMessage (e) {
-  	// 	this.$store.commit('updateMessage', e.target.value)
+  	
+  	// do :function(){
+  	// 	alert(this.name)
   	// },
   	...mapActions([
   	'cnno',
   	'cnname',
-  	'ince'
+  	'ince',
+
+  	'addfoot',
+  	'addtra',
+  	'addstu',
+  	'addspt',
+  	'addoth'
   	])
   },
   mounted() {
-  	// this.title = store.state.a.count
+
   },
   computed:{ 
-  	// cc() {
-  	// 	return store.state.a.count
-  	// },
-  	// message: {
-  	// 	get() {
-  	// 		return this.$store.state.obj.message
-  	// 	},
-  	// 	set (value) {
-  	// 		this.$store.commit('updateMessage', value)
-  	// 	}
-  	// },
-  	
-  	// message: state => state.obj.message,
-  	
+  
   	...mapGetters([
   	'name',
   	'no',
   	'gassets',
   	'gtearnings',
   	'gyearnings',
-  	'doubleCount',
   	
+  	'doubleCount',
+  	'foot',
+  	'tra',
+  	'stu',
+  	'spt',
+  	'oth'
   	])
   },
   created () {
     // this.loadData()
+    // this.do()
   }
 }
 </script>

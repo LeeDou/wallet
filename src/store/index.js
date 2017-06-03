@@ -5,33 +5,34 @@ import Vuex from 'vuex'
 import * as getters from './getters'
 import * as actions from './actions'
 import * as mutations from './mutations'
+import moduleA from './moduleA'
 
 Vue.use(Vuex)
 
-const moduleA = {
-	state: {
-		count:1,
-		message:''
-	},
-	mutations : {
-		ince (state,date) {
-			state.count += date
-		}
-	},
-	actions : {
-		// ince ({}) {
-		// 	context.commit('ince')
-		// }
-		ince :({commit},e) => {
-			commit('ince',5 )
-		}
-	},
-	getters: {
-		doubleCount (state) {
-			return state.count *2
-		}
-	}
-}
+// const moduleA = {
+// 	state: {
+// 		count:1,
+// 		message:''
+// 	},
+// 	mutations : {
+// 		ince (state,date) {
+// 			state.count += date
+// 		}
+// 	},
+// 	actions : {
+// 		// ince ({}) {
+// 		// 	context.commit('ince')
+// 		// }
+// 		ince :({commit},e) => {
+// 			commit('ince',5 )
+// 		}
+// 	},
+// 	getters: {
+// 		// doubleCount (state) {
+// 		// 	return state.count *2
+// 		// }
+// 	}
+// }
 
 const state = {
 	user : {

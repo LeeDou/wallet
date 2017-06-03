@@ -2,9 +2,10 @@
 	width: 100%;
 	background-color: #ffffff;
 	.back{
-		width: 94%;
-		height: 2.6rem;
+		width: 100%;
+		height: 3rem;
 		margin: 0 auto;
+		border-bottom: 0.05rem solid #cccccc;
 		p{
 			height: 2.6rem;
 			font-size: 1.1rem;
@@ -16,7 +17,7 @@
 	.tab{
 		width: 100%;
 		.lk{
-			width: 90%;
+			width: 100%;
 			height: 2rem;
 			margin: 0 auto;
 			border-bottom: 0.1rem solid #cccccc;
@@ -27,6 +28,7 @@
 					float: left;
 					width: 40%;
 					height: 2rem;
+					line-height: 2rem;
 					text-align: center;
 				}
 			}
@@ -60,67 +62,67 @@
 				#eat .pie{
 					background-color:orange;
 					border-color:orange;
-					-moz-transform:rotate(90deg);
-					-webkit-transform:rotate(90deg);
-					-o-transform:rotate(90deg);
-					transform:rotate(90deg);
+					// -moz-transform:rotate(90deg);
+					// -webkit-transform:rotate(90deg);
+					// -o-transform:rotate(90deg);
+					// transform:rotate(90deg);
 				}
 				#tra {
-					-moz-transform:rotate(90deg);
-					-webkit-transform:rotate(90deg);
-					-o-transform:rotate(90deg);
-					transform:rotate(90deg);
+					// -moz-transform:rotate(90deg);
+					// -webkit-transform:rotate(90deg);
+					// -o-transform:rotate(90deg);
+					// transform:rotate(90deg);
 				}
 				#tra .pie{
 					background-color:blue;
 					border-color:blue;
-					-moz-transform:rotate(80deg);
-					-webkit-transform:rotate(80deg);
-					-o-transform:rotate(80deg);
-					transform:rotate(80deg);
+					// -moz-transform:rotate(80deg);
+					// -webkit-transform:rotate(80deg);
+					// -o-transform:rotate(80deg);
+					// transform:rotate(80deg);
 				}
 				#stu {
-					-moz-transform:rotate(160deg);
-					-webkit-transform:rotate(160deg);
-					-o-transform:rotate(160deg);
-					transform:rotate(160deg);
+					// -moz-transform:rotate(160deg);
+					// -webkit-transform:rotate(160deg);
+					// -o-transform:rotate(160deg);
+					// transform:rotate(160deg);
 				}
 				#stu .pie{
 					background-color:green;
 					border-color:green;
-					-moz-transform:rotate(70deg);
-					-webkit-transform:rotate(70deg);
-					-o-transform:rotate(70deg);
-					transform:rotate(70deg);
+					// -moz-transform:rotate(70deg);
+					// -webkit-transform:rotate(70deg);
+					// -o-transform:rotate(70deg);
+					// transform:rotate(70deg);
 				}
 				#spt {
-					-moz-transform:rotate(230deg);
-					-webkit-transform:rotate(230deg);
-					-o-transform:rotate(230deg);
-					transform:rotate(230deg);
+					// -moz-transform:rotate(230deg);
+					// -webkit-transform:rotate(230deg);
+					// -o-transform:rotate(230deg);
+					// transform:rotate(230deg);
 				}
 				#spt .pie{
 					background-color:salmon;
 					border-color:salmon;
-					-moz-transform:rotate(90deg);
-					-webkit-transform:rotate(90deg);
-					-o-transform:rotate(90deg);
-					transform:rotate(90deg);
+					// -moz-transform:rotate(90deg);
+					// -webkit-transform:rotate(90deg);
+					// -o-transform:rotate(90deg);
+					// transform:rotate(90deg);
 				}
 
 				#oth {
-					-moz-transform:rotate(320deg);
-					-webkit-transform:rotate(320deg);
-					-o-transform:rotate(320deg);
-					transform:rotate(320deg);
+					// -moz-transform:rotate(320deg);
+					// -webkit-transform:rotate(320deg);
+					// -o-transform:rotate(320deg);
+					// transform:rotate(320deg);
 				}
 				#oth .pie{
 					background-color:purple;
 					border-color:purple;
-					-moz-transform:rotate(40deg);
-					-webkit-transform:rotate(40deg);
-					-o-transform:rotate(40deg);
-					transform:rotate(40deg);
+					// -moz-transform:rotate(40deg);
+					// -webkit-transform:rotate(40deg);
+					// -o-transform:rotate(40deg);
+					// transform:rotate(40deg);
 				}
 
 			}
