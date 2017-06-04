@@ -73,6 +73,9 @@ export default {
 			pagey1:0,
 			pagey2:0,
 			pagey3:0,
+      ht:0,
+      vh:0,
+      st:0,
 			tm:[]
 		}
 	},
@@ -112,8 +115,12 @@ export default {
 			let py1 = touch.pageY;
 			this.pagey1 = py1;
       // 记住触屏时scrollTop的值
-      me.toScrollTop = this.getScrollTop(me.element)
-			// console.log(py1)
+      this.ht = this.getScrollTop(me.element)
+      this.vh = this.getVisibleHeight(me.element)
+      this.st = this.getScrollHeight(me.element)
+      console.log(this.ht)
+      console.log(this.vh)
+			console.log(this.st)
 		},
     // touchmove
 		touchmo: function(event){
@@ -127,15 +134,15 @@ export default {
       var me = this
 			let py3 = Math.abs(this.pagey1 - this.pagey2);
 			this.pagey3 = py3;
-			console.log(py3);
-      // let h1 = me.toScrollTop + me.toHeight
-      // let h2 = me.scTop;
+			// console.log(py3);
+      let h1 = this.ht + this.vh 
+      let h2 = this.st
       // console.log(h2)
       // console.log(h1)
       if (this.pagey3>10&&h1>h2) {
         this.do()
       }
-      console.log(this.tm);
+      // console.log(this.tm);
 		},
 		do: function(){
       let that = this;
