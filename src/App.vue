@@ -3,7 +3,7 @@
     
     <div class="nav">
       <ul>
-        <li ><router-link to="/" class="active">钱包</router-link></li>
+        <li><router-link to="/" class="active">钱包</router-link></li>
         <li><router-link to="/Finacing">理财</router-link></li>
         <li><router-link to="/Secure">保险</router-link></li>
         <li><router-link to="/Myself">我的</router-link></li>

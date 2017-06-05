@@ -1,5 +1,5 @@
 <template>
-  <div class="secure" @touchstart="touchbegin" @touchmove="touchmo" @touchend="thouchen">
+  <div class="secure" @touchstart="touchbegin($event)" @touchmove="touchmo($event)" @touchend="thouchen($event)">
     <div class="item">
       <img src="../assets/img/insure1.png" alt="">
       <div class="item_content">
@@ -54,6 +54,16 @@
         <h5 class="value">￥69 <span>/年</span></h5>
       </div>
     </div>
+    <div class="item">
+      <img src="../assets/img/insure4.png" alt="">
+      <div class="item_content">
+        <h3>出行意外保障</h3>
+        <p>乘坐飞机|火车|汽车|轮船安全保障</p>
+        <p class="belong">众安保险</p>
+        <h5 class="value">免费</h5>
+      </div>
+    </div>
+
     <div class="item" v-for="ts in tm">
     	<img width="20" height="100" :src="ts.src">
     	<div class="item_content">
@@ -63,6 +73,7 @@
           <h5 class="value">￥69 <span>/年</span></h5>
     	</div>
     </div>
+   <!--  <div class="load">加载更多</div> -->
   </div>
 </template>
 
@@ -86,9 +97,9 @@ export default {
     // 获取可视区域高度
     getVisibleHeight: function(element) {
       if (element) {
-        return element.offsetHeight
+        return element.clientHeight
       } else {
-        return document.documentElement.offsetHeight
+        return document.documentElement.clientHeight
       }
     },
     // 获取滚动区域高度
@@ -107,20 +118,16 @@ export default {
         return document.documentElement.scrollTop
       }
     }, 
-
     // touchstart
 		touchbegin:function(event){
       var me = this
 			let touch = event.targetTouches[0];
 			let py1 = touch.pageY;
-			this.pagey1 = py1;
-      // 记住触屏时scrollTop的值
-      this.ht = this.getScrollTop(me.element)
-      this.vh = this.getVisibleHeight(me.element)
-      this.st = this.getScrollHeight(me.element)
-      console.log(this.ht)
-      console.log(this.vh)
-			console.log(this.st)
+			me.pagey1 = py1; 
+      me.ht = me.$el.offsetHeight - me.getVisibleHeight(me.element)
+      me.vh = me.getVisibleHeight(me.element)
+      me.st = me.getScrollHeight(me.element)
+			// console.log(me.st)
 		},
     // touchmove
 		touchmo: function(event){
@@ -128,25 +135,23 @@ export default {
 			let touch = event.targetTouches[0];
 			let py2 = touch.pageY;
 			this.pagey2 = py2;
-     
 		},
 		thouchen: function(event){
       var me = this
-			let py3 = Math.abs(this.pagey1 - this.pagey2);
-			this.pagey3 = py3;
-			// console.log(py3);
-      let h1 = this.ht + this.vh 
-      let h2 = this.st
-      // console.log(h2)
-      // console.log(h1)
-      if (this.pagey3>10&&h1>h2) {
-        this.do()
+			let py3 = (me.pagey1 - me.pagey2);
+			me.pagey3 = py3;
+      let h1 = me.ht + me.vh + 5.6 * (html.getBoundingClientRect().width / 25)
+      let h2 = me.st
+      if (me.pagey3>10&&h1>h2) {
+        me.do()
       }
-      // console.log(this.tm);
+
+      else if(me.pagey3<-10&&me.$el.scrollTop<=10){
+        alert('hello')
+      }
 		},
 		do: function(){
       let that = this;
-
       this.$ajax.get("./static/secure.json").then(function(response){
         console.log(response);
         let list = response.data;
