@@ -81,8 +81,8 @@
 export default {
 	data(){
 		return {
-			pagey1:0,
-			pagey2:0,
+			startY:0,
+			endY:0,
 			pagey3:0,
       ht:0,
       vh:0,
@@ -123,7 +123,7 @@ export default {
       var me = this
 			let touch = event.targetTouches[0];
 			let py1 = touch.pageY;
-			me.pagey1 = py1; 
+			me.startY = py1; 
       me.ht = me.$el.offsetHeight - me.getVisibleHeight(me.element)
       me.vh = me.getVisibleHeight(me.element)
       me.st = me.getScrollHeight(me.element)
@@ -134,11 +134,11 @@ export default {
       var me = this
 			let touch = event.targetTouches[0];
 			let py2 = touch.pageY;
-			this.pagey2 = py2;
+			this.endY = py2;
 		},
 		thouchen: function(event){
       var me = this
-			let py3 = (me.pagey1 - me.pagey2);
+			let py3 = (me.startY - me.endY);
 			me.pagey3 = py3;
       let h1 = me.ht + me.vh + 5.6 * (html.getBoundingClientRect().width / 25)
       let h2 = me.st
