@@ -28,17 +28,13 @@
   
 	<div class="message_list">
 	  <div class="message_item it_one">
-	  	<p>我的理财<span>0 ></span></p>
-	  	
+	  	<p>我的理财<span>0 ></span></p>	  	
 	  </div>
 	  <div class="message_item it_two">
-	  	<p>我的保单<span>0 ></span></p>
-	  	
+	  	<p>我的保单<span>0 ></span></p>	  	
 	  </div>
 	  <div class="message_item it_three">
-
-	  	<p>更多<span>></span></p>
-	  	
+	  	<p>更多<span>></span></p>	
 	  </div>  
 	</div>
   </div>
@@ -58,15 +54,10 @@ export default {
     }
   },
   methods: {
-  	
-  	// do :function(){
-  	// 	alert(this.name)
-  	// },
   	...mapActions([
   	'cnno',
   	'cnname',
   	'ince',
-
   	'addfoot',
   	'addtra',
   	'addstu',
@@ -84,8 +75,7 @@ export default {
   	'no',
   	'gassets',
   	'gtearnings',
-  	'gyearnings',
-  	
+  	'gyearnings',	
   	'doubleCount',
   	'foot',
   	'tra',
