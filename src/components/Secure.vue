@@ -121,19 +121,18 @@ export default {
     // touchstart
 		touchbegin:function(event){
       var me = this
-			let touch = event.targetTouches[0];
-			let py1 = touch.pageY;
+			// let touch = event.targetTouches[0];
+			let py1 = event.targetTouches[0].pageY;
 			me.startY = py1; 
       me.ht = me.$el.offsetHeight - me.getVisibleHeight(me.element)
       me.vh = me.getVisibleHeight(me.element)
       me.st = me.getScrollHeight(me.element)
-			// console.log(me.st)
 		},
     // touchmove
 		touchmo: function(event){
       var me = this
-			let touch = event.targetTouches[0];
-			let py2 = touch.pageY;
+			// let touch = event.targetTouches[0];
+			let py2 = event.targetTouches[0].pageY;
 			this.endY = py2;
 		},
 		thouchen: function(event){

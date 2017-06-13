@@ -39,21 +39,7 @@
 
 	  	<p>更多<span>></span></p>
 	  	
-	  </div>
-	  <div>
-	    <!-- <input type="text" :value="message" @input="updateMessage">  -->
-		<!-- <button @click="ince" value=2>+4</button>
-	  	<p>{{doubleCount}}</p> -->
-	  	<button @click='addtra' value="1">tra++</button>
-	  	<p>{{tra}}</p>
-	  	<p>{{foot}}</p>
-	  </div>
-	  <!-- <div>
-	  	<p>name is {{name}}</p>
-	  	<p>no is {{no}}</p>
-		<button @click='cnname'>change name</button>
-		<button @click='cnno'>change no</button>
-	  </div> -->  
+	  </div>  
 	</div>
   </div>
 </template>
