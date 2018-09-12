@@ -21,7 +21,7 @@ npm run build --report
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 
-# 完成魅族钱包部分实现
+# 完成魅族钱包部分功能实现
 ## 技术栈 vue + vuex + axios + vue-router
 ### 目前只是对部分进行重构，接下来会持续对项目进行增添。。。
 
